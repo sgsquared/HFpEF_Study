@@ -1,4 +1,3 @@
-﻿
 -- Joining all output tables into master table - need to deduce which columns I need and then join all on ADMID - the only table I won't be able to join is the one on number of subsequent admissions
 
 USE heart_failure_outputs;
