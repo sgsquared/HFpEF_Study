@@ -1,3 +1,5 @@
+# Importing the table named adm
+
 use heart_failure;
 
 SET GLOBAL local_infile=ON;
