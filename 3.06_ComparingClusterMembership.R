@@ -29,8 +29,6 @@ overlap_matrix <- calculate_overlap(kappa_calculation)
 
 # Print the overlap matrix
 print(overlap_matrix)
-# 1=5, 2=2, 3=6, 4=1, 5=3, 6=4 - admissions
-# 1=1, 2=3, 3=2, 4=4, 5=5, 6=6 - patients
 heatmap(overlap_matrix)
 
 # change cluster method 2 to match clusters better
@@ -38,13 +36,6 @@ heatmap(overlap_matrix)
 kappa_calculation$new_PAM_clusters <- ifelse(kappa_calculation$PAM_Cluster == 1, 1,
                                             ifelse(kappa_calculation$PAM_Cluster == 3, 2,
                                                    ifelse(kappa_calculation$PAM_Cluster == 2, 3, NA)))
-# 6 clusters
-# kappa_calculation$new_PAM_clusters <- ifelse(kappa_calculation$PAM_Cluster == 1, 1,
-#                                              ifelse(kappa_calculation$PAM_Cluster == 3, 2,
-#                                                     ifelse(kappa_calculation$PAM_Cluster == 2, 3,  
-#                                                            ifelse(kappa_calculation$PAM_Cluster == 4, 4,
-#                                                                   ifelse(kappa_calculation$PAM_Cluster == 5, 5,
-#                                                                          ifelse(kappa_calculation$PAM_Cluster == 6, 6, NA))))))
 kappa_new_calculate <- kappa_calculation[, c(1,3)]
 new_kappa_result <- cohen.kappa(as.data.frame(kappa_new_calculate))
 print(new_kappa_result)
@@ -75,16 +66,3 @@ kappa_results <- sapply(levels, function(level) calculate_kappa_per_level(kappa_
 
 # Print the results
 kappa_results
-
-# Change cluster method 2 to match clusters better in overall dataset - better for comparison
-# 3 clusters
-# cluster_results$PAM_Cluster <- ifelse(cluster_results$PAM_Cluster == 1, 1,
-#                                              ifelse(kappa_calculation$PAM_Cluster == 3, 2,
-#                                                     ifelse(kappa_calculation$PAM_Cluster == 2, 3, NA)))
-# 6 clusters
-# cluster_results$PAM_Cluster <- ifelse(cluster_results$PAM_Cluster == 1, 1,
-#                                       ifelse(kappa_calculation$PAM_Cluster == 3, 2,
-#                                              ifelse(kappa_calculation$PAM_Cluster == 2, 3,
-#                                                     ifelse(kappa_calculation$PAM_Cluster == 4, 4,
-#                                                            ifelse(kappa_calculation$PAM_Cluster == 5, 5,
-#                                                                   ifelse(kappa_calculation$PAM_Cluster == 6, 6, NA))))))
