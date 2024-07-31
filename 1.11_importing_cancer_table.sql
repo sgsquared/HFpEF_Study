@@ -1,3 +1,5 @@
+# Importing the table named cancer
+
 use heart_failure;
 
 CREATE TABLE cancer (
