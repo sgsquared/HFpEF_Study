@@ -1,3 +1,5 @@
+# Importing the table named meds
+
 SET GLOBAL local_infile=ON;
 
 use heart_failure;
