@@ -1,3 +1,5 @@
+# Importing the table named ops
+
 use heart_failure;
 
 CREATE TABLE OPs (
