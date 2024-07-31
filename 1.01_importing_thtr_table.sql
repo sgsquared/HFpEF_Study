@@ -1,3 +1,5 @@
+# Importing the table named thtr
+
 SET GLOBAL local_infile=ON;
 
 use heart_failure;
