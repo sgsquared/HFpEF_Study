@@ -1,4 +1,6 @@
-﻿-- Problem, demographics, admission details
+# Isolating patient demographics and admission details
+
+-- Problem, demographics, admission details
 SELECT
 	probs.PATIENTID,
 	probs.ADMID,
