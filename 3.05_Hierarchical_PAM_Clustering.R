@@ -2,9 +2,6 @@
 ### - Label 80% of the patients with clusters
 ### - Assess differences in outcomes amongst these clusters
 
-complete_selected_data
-
-# ML_final_data <- complete_selected_data
 ML_final_data <- imputed_dataset
 # Rather than removing columns - keep them for Table 1 later on
 
