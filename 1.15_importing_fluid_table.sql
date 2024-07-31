@@ -1,3 +1,5 @@
+# Importing table named fluid
+
 use heart_failure;
 
 CREATE TABLE fluid (
